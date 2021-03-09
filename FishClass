@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+class fish{
+private:
+  int xpos;
+  int ypos;
+  int xVel;
+  int yVel;
+  int color;
+  int isDead;
+  int onHook;
+
+public:
+  fish();
+  void moving();
+  void print();
+
+};
+
+int main() {
+  char input;
+  fish f1;
+  fish f2;
+  fish f3;
+
+do{
+  f1.moving();
+  f2.moving();
+  f3.moving();
+
+  f1.print();
+  f1.print();
+  f1.print();
+
+  cin>>input;
+
+  }while(input!= 'q');
+}
+
+
+fish::fish(){
+  xpos = rand()%500;
+  ypos = 450;
+  xVel = -2;
+  color = 'b';
+  isDead = true;
+
+}
